@@ -1,4 +1,4 @@
-const Manga = require("../models/mangas");
+const Manga = require("../models/Manga");
 
 //Funcion que recoge todos los mangas
 async function getManga(req, res) {

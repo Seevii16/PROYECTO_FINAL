@@ -1,10 +1,12 @@
 const routes = require("./routes");
 const express = require("express");
 const mongoose = require("mongoose"); // new
-const { dbUrl } = require("./config");
+require("dotenv").config();
+const MONGODB_URL = process.env.MONGODB_URL;
 
 // Conexion con la Base de Datos de Mongo
-mongoose.connect(dbUrl).then(() => {
+console.log(MONGODB_URL)
+mongoose.connect(MONGODB_URL).then(() => {
   const app = express();
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));

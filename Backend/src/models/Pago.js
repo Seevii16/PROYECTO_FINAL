@@ -8,7 +8,12 @@ const pagosSchema = new Schema({
     },
     "precio": {
         "type": "Number"
+    },
+    "_id" :{
+        ref: "Usuario",
+        type: String
     }
+    
 });
 let Pago = mongoose.model("pago", pagosSchema);
 

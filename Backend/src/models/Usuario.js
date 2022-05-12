@@ -7,10 +7,16 @@ const usuariosSchema = new Schema({
   },
   usuarioContra: {
     type: "String",
+    required : true
   },
   usuarioEmail: {
     type: "String",
+    unique: true
   },
+  roles : [{
+    ref:"Rol",
+    type: Schema.Types.ObjectId
+  }]
 
 });
 
