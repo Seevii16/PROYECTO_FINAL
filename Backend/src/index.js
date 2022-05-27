@@ -4,6 +4,7 @@ const express = require("express");
 const mongoose = require("mongoose"); // new
 require('dotenv').config() 
 const url = process.env.MONGODB_URI
+const PORT = process.env.PORT
 
 
 // Conexion con la Base de Datos de Mongo
@@ -14,7 +15,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }).then(
   
   app.use("/", routes);
 
-  app.listen(5000, () => {
+  app.listen(PORT, () => {
     
     console.log("Server has started!");
   });
