@@ -1,11 +1,5 @@
-require("dotenv").config();
+const config = require('dotenv');
 
-const port = 3000;
-
-const dbUrl =
-  "mongodb+srv://Admin:Admin@cluster0.mixph.mongodb.net/TiendaMangas?retryWrites=true&w=majority";
-
-module.exports = {
-  port,
-  dbUrl,
-};
+config.config();
+const MONGODB_URI = process.env.MONGODB_URI
+module.exports = MONGODB_URI 
