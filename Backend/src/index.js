@@ -11,9 +11,10 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }).then(
   const app = express();
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
-  app.use("/tiendaMangas", routes);
+  app.use("/", routes);
 
   app.listen(3000, () => {
+    
     console.log("Server has started!");
   });
 });
