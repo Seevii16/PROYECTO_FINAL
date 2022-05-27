@@ -11,6 +11,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }).then(
   const app = express();
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
+  
   app.use("/", routes);
 
   app.listen(3000, () => {

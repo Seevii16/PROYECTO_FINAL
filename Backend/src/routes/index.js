@@ -9,7 +9,9 @@ const {
 } = require("../controllers/usuarios");
 
 const router = express.Router();
-
+router.get("/",(req,res) =>{
+  res.send("HolaMundo!")
+});
 router.get("/mangas", getManga);
 router.get("/mangas/demografia", buscarPorDemografia);
 router.post("/agregarManga", agregarManga);
