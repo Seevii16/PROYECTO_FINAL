@@ -1,4 +1,4 @@
-const Pago = require("../models/pagos");
+const Pago = require("../models/Pago");
 const nodemailer = require("nodemailer");
 //Funcion que recoge los pagos
 async function getPago(req, res) {
