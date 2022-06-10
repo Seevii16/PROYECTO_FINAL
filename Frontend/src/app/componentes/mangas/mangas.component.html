@@ -1,1 +1,10 @@
-<p>mangas works!</p>
+<div class="row">
+    <div class="col-md-4" *ngFor="let manga of mangas">
+        <div class="card">
+            <div class="card-body">
+             {{manga.mangaName}}
+            </div>
+           
+        </div>
+    </div>
+</div>
