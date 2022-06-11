@@ -4,6 +4,8 @@ import * as mangasController from '../controllers/mangas'
 
 const router = express.Router();
 
+router.get("/", mangasController.getMangas);
+
 router.get("/", mangasController.getManga);
 
 router.post("/", mangasController.agregarManga);
