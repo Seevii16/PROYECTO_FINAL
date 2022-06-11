@@ -1,0 +1,8 @@
+.acortarDescripcion{
+    text-overflow: ellipsis; 
+    overflow: hidden;
+    white-space: nowrap
+}
+.ajustarImagen{
+    width: 500px;
+}

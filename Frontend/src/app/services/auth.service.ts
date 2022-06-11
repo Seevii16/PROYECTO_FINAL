@@ -22,11 +22,14 @@ export class AuthService {
     /*Comprueba si tiene token en el LocalStorage para ver si se ha logueado a alguna cuenta*/ 
     return !!localStorage.getItem('token')
   }
+  admin(){}
   cerrarSesion(){
+    //Elimina el token y vuelve al menu principal
     localStorage.removeItem('token')
-    this.router.navigate(['/'])
+    this.router.navigate(['/mangas'])
   }
   getToken(){
+    //Recoge el token
     return localStorage.getItem('token')
   }
 }

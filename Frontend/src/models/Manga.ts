@@ -5,6 +5,7 @@ export class Manga {
   public mangaDemography: String;
   public mangaGender: String;
   public mangaPrecio: Number;
+  public imagePath : String;
 
   constructor(
     _id: String,
@@ -12,7 +13,8 @@ export class Manga {
     mangaDescription: String,
     mangaDemography: String,
     mangaGender: String,
-    mangaPrecio: Number
+    mangaPrecio: Number,
+    imagePath : String
   ) {
     this._id = _id;
     this.mangaName = mangaName;
@@ -20,5 +22,6 @@ export class Manga {
     this.mangaDemography = mangaDemography;
     this.mangaGender = mangaGender;
     this.mangaPrecio = mangaPrecio;
+    this.imagePath = imagePath;
   }
 }

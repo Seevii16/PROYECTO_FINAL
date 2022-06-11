@@ -12,7 +12,7 @@ export class MangasComponent implements OnInit {
 
   constructor(private mangasService : MangasService) { 
     this.mangas = [
-      new Manga ('','','','','',0)
+      new Manga ('','','','','',0,'')
     ]
   }
 
@@ -31,6 +31,7 @@ export class MangasComponent implements OnInit {
            res.mangas[i].mangaDemography,
            res.mangas[i].mangaGender,
            res.mangas[i].mangaPrecio,
+           res.mangas[i].imagePath
          )
  
         }

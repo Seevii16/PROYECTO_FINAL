@@ -12,6 +12,8 @@ import { PerfilComponent } from './componentes/perfil/perfil.component';
 
 import { AuthGuard } from "./auth.guard";
 import { RecogerTokenService } from "./services/recoger-token.service";
+import { MangaComponent } from './componentes/manga/manga.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { RecogerTokenService } from "./services/recoger-token.service";
     LoginComponent,
     RegistrarseComponent,
     MangasComponent,
-    PerfilComponent
+    PerfilComponent,
+    MangaComponent,
+
   ],
   imports: [
     BrowserModule,
