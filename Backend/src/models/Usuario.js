@@ -31,6 +31,9 @@ const usuariosSchema = new Schema({
   usuarioEmail: {
     type: "String",
     unique: true
+  },
+  fotoperfilPath:{
+    type:"String"
   }
 
 
