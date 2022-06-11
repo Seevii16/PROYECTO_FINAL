@@ -40,6 +40,7 @@ async function agregarManga(req, res) {
     mangaDemography: req.body.mangaDemography,
     mangaGender: req.body.mangaGender,
     mangaPrecio: Number(req.body.mangaPrecio),
+    imagePath : req.body.imagePath
   });
   await manga.save();
   res.send(manga);
