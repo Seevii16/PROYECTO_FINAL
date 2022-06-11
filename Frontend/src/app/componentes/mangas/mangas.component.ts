@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MangasService  } from "../../services/mangas.service";
 import { Manga } from 'src/models/Manga';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-mangas',
@@ -10,7 +11,7 @@ import { Manga } from 'src/models/Manga';
 export class MangasComponent implements OnInit {
   mangas : Array<Manga>
 
-  constructor(private mangasService : MangasService) { 
+  constructor(private mangasService : MangasService , private router : Router) { 
     this.mangas = [
       new Manga ('','','','','',0,'')
     ]
@@ -38,11 +39,12 @@ export class MangasComponent implements OnInit {
       
     
       },
-      err => console.log
+      err => console.log(err)
     )
   }
-  elegirManga(id:String){
-    console.log(id)
+  elegirManga(id: String) {
+    this.router.navigate(['/mangas/'+id]);
   }
-
 }
+
+
