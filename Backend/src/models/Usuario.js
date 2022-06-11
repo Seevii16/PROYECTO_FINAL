@@ -6,6 +6,24 @@ const usuariosSchema = new Schema({
   usuarioNombre: {
     type: "String",
   },
+  usuarioApellido1: {
+    type: "String",
+  },
+  usuarioEdad: {
+    type: "String",
+  },
+  usuarioPais: {
+    type: "String",
+  },
+  usuarioApellido2: {
+    type: "String",
+  },
+  usuarioDireccion: {
+    type: "String",
+  },
+  usuarioTel: {
+    type: "Number",
+  },
   usuarioContra: {
     type: "String",
     required : true
