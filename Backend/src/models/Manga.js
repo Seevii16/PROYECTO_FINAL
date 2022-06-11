@@ -20,7 +20,7 @@ const mangasSchema = new Schema({
     "mangaPrecio": {
         "type": "Number"
     },
-    "imgURL":{
+    "imagePath":{
         "type": "String"
     }
 });
