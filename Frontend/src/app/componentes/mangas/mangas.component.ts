@@ -41,5 +41,8 @@ export class MangasComponent implements OnInit {
       err => console.log
     )
   }
+  elegirManga(id:String){
+    console.log(id)
+  }
 
 }

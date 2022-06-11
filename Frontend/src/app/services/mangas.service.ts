@@ -14,4 +14,7 @@ export class MangasService {
   getMangas(){
    return  this.http.get<any>(this.URL + '/mangas');
   }
+  getManga(id:String){
+   return 
+  }
 }
