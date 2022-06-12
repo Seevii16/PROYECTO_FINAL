@@ -13,7 +13,14 @@ export class RegistrarseComponent implements OnInit {
   usuario = {
     usuarioNombre:'',
     usuarioEmail:'',
-    usuarioContra:''
+    usuarioContra:'',
+    usuarioApellido1:'',
+    usuarioApellido2:'',
+    usuarioTel:0,
+    usuarioUserName:'',
+    usuarioEdad:0,
+    usuarioDireccion:'',
+    usuarioPais:'',
   }
 
   constructor(
