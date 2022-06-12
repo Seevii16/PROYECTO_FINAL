@@ -6,6 +6,9 @@ const usuariosSchema = new Schema({
   usuarioNombre: {
     type: "String",
   },
+  usuarioUserName: {
+    type: "String",
+  },
   usuarioApellido1: {
     type: "String",
   },
@@ -30,10 +33,7 @@ const usuariosSchema = new Schema({
   },
   usuarioEmail: {
     type: "String",
-    unique: true
-  },
-  fotoperfilPath:{
-    type:"String"
+  
   }
 
 

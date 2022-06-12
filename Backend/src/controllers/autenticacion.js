@@ -1,10 +1,11 @@
 const Usuario = require("../models/Usuario");
-const Rol = require("../models/Rol");
 const jwt = require("jsonwebtoken");
 
 async function registrarse  (req, res){
-    const {usuarioNombre, usuarioEmail, usuarioContra } = req.body;
-    const newUsuario = new Usuario({usuarioNombre,usuarioEmail, usuarioContra});
+    const {usuarioNombre, usuarioEmail, usuarioContra,usuarioApellido1,usuarioApellido2,usuarioEdad,
+	usuarioPais,usuarioDireccion,usuarioTel,usuarioUserName } = req.body;
+    const newUsuario = new Usuario({usuarioNombre,usuarioEmail, usuarioContra,usuarioApellido1,usuarioApellido2,usuarioEdad,
+		usuarioPais,usuarioDireccion,usuarioTel,usuarioUserName});
     await newUsuario.save();
 		const token = await jwt.sign({_id: newUsuario._id}, 'secretkey');
     res.status(200).json({token});
