@@ -26,7 +26,7 @@ export class AuthService {
   cerrarSesion(){
     //Elimina el token y vuelve al menu principal
     localStorage.removeItem('token')
-    this.router.navigate(['/mangas'])
+    this.router.navigate(['/loguin'])
   }
   getToken(){
     //Recoge el token

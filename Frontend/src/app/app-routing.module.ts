@@ -4,14 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from "./componentes/login/login.component";
 import { RegistrarseComponent } from "./componentes/registrarse/registrarse.component";
 import { MangasComponent  } from "./componentes/mangas/mangas.component";
-import { PerfilComponent  } from "./componentes/perfil/perfil.component";
 import { MangaComponent } from "./componentes/manga/manga.component";
 import { AuthGuard } from "./auth.guard";
 
 const routes: Routes = [
   {
     path: 'mangas',
-    component : MangasComponent
+    component : MangasComponent,
+    canActivate: [AuthGuard]
   },
   
   {
@@ -22,15 +22,12 @@ const routes: Routes = [
     path: 'registrarse',
     component : RegistrarseComponent
   },
-  {
-    path: 'perfil',
-    component : PerfilComponent,
-    canActivate: [AuthGuard]
-  },
+  
   
    {
     path:'mangas/:id',
-    component : MangaComponent
+    component : MangaComponent,
+    canActivate: [AuthGuard]
   }
 
 ];

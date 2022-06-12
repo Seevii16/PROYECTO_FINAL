@@ -8,12 +8,12 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegistrarseComponent } from './componentes/registrarse/registrarse.component';
 import { MangasComponent } from './componentes/mangas/mangas.component';
-import { PerfilComponent } from './componentes/perfil/perfil.component';
+
 
 import { AuthGuard } from "./auth.guard";
 import { RecogerTokenService } from "./services/recoger-token.service";
 import { MangaComponent } from './componentes/manga/manga.component';
-import { PagoComponent } from './componentes/pago/pago.component';
+
 
 
 @NgModule({
@@ -22,9 +22,8 @@ import { PagoComponent } from './componentes/pago/pago.component';
     LoginComponent,
     RegistrarseComponent,
     MangasComponent,
-    PerfilComponent,
-    MangaComponent,
-    PagoComponent,
+    MangaComponent
+
 
   ],
   imports: [
