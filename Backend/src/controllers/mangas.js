@@ -1,7 +1,7 @@
 const Manga = require("../models/Manga");
 
 //Funcion que recoge todos los mangas
-async function getManga(req, res) {
+async function getMangas(req, res) {
   const { pagina = 1, limit = 10 } = req.query;
 
   try {
@@ -29,7 +29,11 @@ async function getManga(req, res) {
     //console.error(err.message);
   }
 }
-
+ async function getManga(req, res){
+  const { id } = req.params;
+  const manga = await Manga.findById(id);
+  return res.json(manga);
+}
 async function agregarManga(req, res) {
   // Recoger los datos que escribe el usuario
   const manga = new Manga({
@@ -40,6 +44,7 @@ async function agregarManga(req, res) {
     mangaDemography: req.body.mangaDemography,
     mangaGender: req.body.mangaGender,
     mangaPrecio: Number(req.body.mangaPrecio),
+    imagePath : req.body.imagePath
   });
   await manga.save();
   res.send(manga);
@@ -79,6 +84,7 @@ async function buscarPorDemografia(req, res) {
 
 module.exports = {
   getManga,
+  getMangas,
   agregarManga,
   eliminarManga,
   buscarPorDemografia,
