@@ -31,8 +31,13 @@ async function getMangas(req, res) {
 }
  async function getManga(req, res){
   const { id } = req.params;
-  const manga = await Manga.findById(id);
-  return res.json(manga);
+  try {
+    const manga = await Manga.findById(id);
+    return res.json(manga);
+    
+  } catch (error) {
+    console.log(error)
+  }
 }
 async function agregarManga(req, res) {
   // Recoger los datos que escribe el usuario

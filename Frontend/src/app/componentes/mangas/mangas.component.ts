@@ -42,9 +42,10 @@ export class MangasComponent implements OnInit {
       err => console.log(err)
     )
   }
-  elegirManga(id: String) {
+  elegirManga(id: string) {
     console.log(id)
     this.router.navigate(['/mangas/'+id]);
+  
   }
 }
 

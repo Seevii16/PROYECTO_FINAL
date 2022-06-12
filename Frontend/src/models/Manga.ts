@@ -1,20 +1,20 @@
 export class Manga {
-  public _id: String;
-  public mangaName: String;
-  public mangaDescription: String;
-  public mangaDemography: String;
-  public mangaGender: String;
+  public _id: string;
+  public mangaName: string;
+  public mangaDescription: string;
+  public mangaDemography: string;
+  public mangaGender: string;
   public mangaPrecio: Number;
-  public imagePath : String;
+  public imagePath : string;
 
   constructor(
-    _id: String,
-    mangaName: String,
-    mangaDescription: String,
-    mangaDemography: String,
-    mangaGender: String,
+    _id: string,
+    mangaName: string,
+    mangaDescription: string,
+    mangaDemography: string,
+    mangaGender: string,
     mangaPrecio: Number,
-    imagePath : String
+    imagePath : string
   ) {
     this._id = _id;
     this.mangaName = mangaName;

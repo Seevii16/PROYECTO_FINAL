@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "f3f7812c-9537-4f0b-a5b4-76dec2299049",
+		"name": "Collection Tienda Mangas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18625499"
+	},
+	"item": [
+		{
+			"name": "AgregarManga",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"mangaId\": \"002\",\r\n      \"mangaName\": \"NARUTO\",\r\n      \"mangaVolumen\": \"5\",\r\n      \"mangaDescription\": \"Es una serie Manga que cuenta la historia de un joven ninja hiperactivo llamado Naruto Uzumaki que hara todo lo posible por ascender al maximo grado ninja de su aldea con el proposito de ser reconocido como alguien importante dentro de su aldea.\",\r\n      \"mangaDemography\": \"shonen\",\r\n      \"mangaGender\": \"Action\",\r\n      \"mangaPrecio\" : \"7.99\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tiendaMangas/agregarManga",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tiendaMangas",
+						"agregarManga"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMangas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://yorozuyamangas.herokuapp.com/mangas",
+					"protocol": "https",
+					"host": [
+						"yorozuyamangas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"mangas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUsuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjk2MGZjYzIxMTlkNDRiMWI3ZDE1NjciLCJpYXQiOjE2NTQwMDE2MTJ9.Q_wq620-vVU5oGF6egnSE5MU_GXPrYE-W4JAbnprfD4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "usuarioEmail",
+							"value": "eee@aaa.com",
+							"type": "text"
+						},
+						{
+							"key": "usuarioContra",
+							"value": "aaa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://yorozuyamangas.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"yorozuyamangas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "usuarioId",
+							"value": "4",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "usuarioNombre",
+							"value": "aaae",
+							"type": "text"
+						},
+						{
+							"key": "usuarioContra",
+							"value": "aaae",
+							"type": "text"
+						},
+						{
+							"key": "usuarioEmail",
+							"value": "eaee@aaa.com",
+							"type": "text"
+						},
+						{
+							"key": "roles",
+							"value": "admin",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "usuarioUserName",
+							"value": "aaa773",
+							"type": "text"
+						},
+						{
+							"key": "usuarioEdad",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "usuarioApellido1",
+							"value": "aaaa",
+							"type": "text"
+						},
+						{
+							"key": "usuarioDireccion",
+							"value": "aaaa",
+							"type": "text"
+						},
+						{
+							"key": "usuarioTel",
+							"value": "111111111111111",
+							"type": "text"
+						},
+						{
+							"key": "usuarioApellido2",
+							"value": "aaaa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://yorozuyamangas.herokuapp.com/registrarse",
+					"protocol": "https",
+					"host": [
+						"yorozuyamangas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"registrarse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPagos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tiendaMangas/pagos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tiendaMangas",
+						"pagos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AñadirPago",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idManga\" : \"1\",\r\n    \"idUser\" : \"1\",\r\n    \"idPago\" : \"1\",\r\n    \"total\" : \"7.99\",\r\n    \"precio\" : \"7.99\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://yorozuyamangas.herokuapp.com/agregarPago",
+					"protocol": "https",
+					"host": [
+						"yorozuyamangas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"agregarPago"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar manga",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n    \"idManga\": 1,\r\n    \"mangaName\":\"NARUTO\"\r\n\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://yorozuyamangas.herokuapp.com/eliminarManga",
+					"protocol": "https",
+					"host": [
+						"yorozuyamangas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"eliminarManga"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FiltrarDemografia",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mangaDemography\" : \"Seinen\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://yorozuyamangas.herokuapp.com/mangas/demografia",
+					"protocol": "https",
+					"host": [
+						"yorozuyamangas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"mangas",
+						"demografia"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

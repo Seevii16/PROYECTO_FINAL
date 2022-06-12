@@ -1,1 +1,34 @@
-<p>manga works!</p>
+
+<div class="row">
+    <div class="col-12 titulo">
+    <h1><input  type="text" disabled readonly [value]="manga.mangaName"></h1>
+    
+</div>
+</div>
+<div class="row" style="margin-top: 10px;">
+    <div class="col-12 titulo">
+    <h3>Demografía: <input type="text" disabled readonly [value]="manga.mangaDemography"></h3>
+    
+</div>
+</div>
+<div class="row" style="margin-top: 10px;">
+    <div class="col-12 titulo">
+    <h3>Genero: <input type="text" disabled readonly [value]="manga.mangaGender"></h3>
+    
+</div>
+</div>
+<div class="row" style="margin-top: 10px;">
+    
+        <div class="col-md-6 descripcion">
+            <h1>Descripcion</h1>
+            <p><textarea  rows="8" type="text" disabled readonly [value]="manga.mangaDescription"></textarea></p>
+        </div>
+        <div class="col-md-6 imagen">
+            <img [src]="manga.imagePath">
+        </div>
+    </div>
+<div class="row" style="margin-top: 10px;">
+    <div class="col-12 titulo">
+    <h3>Precio: <input type="text" disabled readonly [value]="manga.mangaPrecio"></h3>
+
+</div>

@@ -27,10 +27,7 @@ const routes: Routes = [
     component : PerfilComponent,
     canActivate: [AuthGuard]
   },
-   {
-     path:'mangas/:mangaName',
-     component : MangaComponent
-   },
+  
    {
     path:'mangas/:id',
     component : MangaComponent
