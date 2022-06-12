@@ -1,0 +1,16 @@
+
+<div class="row">
+    <div class="col-md-4" *ngFor="let manga of mangas">
+        <div class="card ">
+            <img class="card-img" src={{manga.imagePath}} alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{manga.mangaName}}</h5>
+                <p class="card-text">{{manga.mangaGender}} {{manga.mangaDemography}}</p>
+                <p class="card-text acortarDescripcion">{{manga.mangaDescription}}</p>
+                <a (click)="elegirManga(manga._id)" class="btn btn-primary">Volumenes</a>
+             
+            </div>
+           
+        </div>
+    </div>
+</div>
