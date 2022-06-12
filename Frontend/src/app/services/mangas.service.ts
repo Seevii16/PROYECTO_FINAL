@@ -7,7 +7,7 @@ import { Manga } from 'src/models/Manga';
 })
 export class MangasService {
 
-  private URL = 'http://localhost:5000'
+  private URL = 'https://yorozuyamangas.herokuapp.com'
 
   constructor(private http:HttpClient) { 
 

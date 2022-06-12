@@ -13,6 +13,7 @@ import { PerfilComponent } from './componentes/perfil/perfil.component';
 import { AuthGuard } from "./auth.guard";
 import { RecogerTokenService } from "./services/recoger-token.service";
 import { MangaComponent } from './componentes/manga/manga.component';
+import { PagoComponent } from './componentes/pago/pago.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { MangaComponent } from './componentes/manga/manga.component';
     MangasComponent,
     PerfilComponent,
     MangaComponent,
+    PagoComponent,
 
   ],
   imports: [

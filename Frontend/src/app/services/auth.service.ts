@@ -8,7 +8,7 @@ import { Router } from "@angular/router";
 })
 export class AuthService {
 
-  private URL = 'http://localhost:5000'
+  private URL = 'https://yorozuyamangas.herokuapp.com'
 
   constructor(private http:HttpClient,private router : Router) { }
 

@@ -3,12 +3,15 @@ const Usuario = require("../models/Usuario");
 const bcrypt = require("bcrypt");
 
 //Obtener todos los usuarios
-async function getUsuario(req, res) {
-  let usuarios = await Usuario.find({});
-
-  // console.log(usuarios);
-  res.send(usuarios);
-  // console.log("Hola mundo");
+async function getUsuario(req, res){
+  const { id } = req.params;
+  try {
+    const usuario = await Usuario.findById(id);
+    return res.json(usuario);
+    
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 async function agregarUsuario(req, res) {
