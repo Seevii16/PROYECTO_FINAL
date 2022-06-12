@@ -1,0 +1,12 @@
+.logos img{
+    width: 25px;
+ 
+}
+body{
+    background-image: url(https://c.wallhere.com/photos/49/47/manga_anime_games-1950769.jpg!d);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Alegreya Sans SC';
+}

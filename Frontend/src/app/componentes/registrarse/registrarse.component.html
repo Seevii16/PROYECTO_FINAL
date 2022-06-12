@@ -1,5 +1,7 @@
+
+<link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
 <div class="row">
-    <div class="col-md-4 mx-auto">
+    <div class="col-md-12 mx-auto">
         <div class="card">
             <div class="card-header">
                 Registro
@@ -7,19 +9,29 @@
             <div class="card-body">
                 <form (submit) ="registrarse()">
                     <div class="form-group">
-                        <input type="text" [(ngModel)]="usuario.usuarioNombre" name="nombre" class="form-control" placeholder="Nombre" required autofocus>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" [(ngModel)]="usuario.usuarioEmail" name="email" class="form-control" placeholder="Email" required autofocus>
-                    </div>
-                    <div class="form-group">
+                        <p>Nombre Usuario</p>
+                        <input type="text" [(ngModel)]="usuario.usuarioUserName" name="nombre" class="form-control" placeholder="Nombre de Usuario" required >
+                        <p>Nombre</p>
+                        <input type="text" [(ngModel)]="usuario.usuarioNombre" name="nombre" class="form-control" placeholder="Nombre" required >
+                        <p>Apellido1</p>
+                        <input type="text" [(ngModel)]="usuario.usuarioApellido1" name="apellido1" class="form-control" placeholder="Apellido1" required >
+                        <p>Apellido2</p>
+                        <input type="text" [(ngModel)]="usuario.usuarioApellido2" name="apellido2" class="form-control" placeholder="Apellido2"  >
+                        <p>Edad</p>
+                        <input type="number" [(ngModel)]="usuario.usuarioEdad" name="edad" class="form-control" required autofocus>
+                        <p>Telefono</p>
+                        <input type="tel" [(ngModel)]="usuario.usuarioTel" name="telefono" class="form-control" placeholder="Num-Telefono" autofocus>
+                        <p>Direccion</p>
+                        <input type="text" [(ngModel)]="usuario.usuarioDireccion" name="direccion" class="form-control" placeholder="Direccion" autofocus>
+                        <p>Email</p>
+                        <input type="email" [(ngModel)]="usuario.usuarioEmail" name="email" class="form-control" placeholder="Email" required autofocus>
+                        <p>Contraseña</p>
                         <input type="password" [(ngModel)]="usuario.usuarioContra" name="contra" class="form-control" placeholder="Contraseña" required autofocus>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">
-                        Registrarse
-                    </button>
+                    <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+

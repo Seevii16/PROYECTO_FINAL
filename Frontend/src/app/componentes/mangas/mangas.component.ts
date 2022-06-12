@@ -43,6 +43,7 @@ export class MangasComponent implements OnInit {
     )
   }
   elegirManga(id: String) {
+    console.log(id)
     this.router.navigate(['/mangas/'+id]);
   }
 }
