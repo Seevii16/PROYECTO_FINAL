@@ -6,7 +6,7 @@ const {login,registrarse} = require("../controllers/autenticacion");
 
 const router = express.Router();
 router.get("/",(req,res) =>{
-  res.send("HolaMundo!")
+  res.sendFile('../vista/frontend/index.html')
 });
 router.get("/mangas/:id", getManga);
 router.get("/mangas", getMangas);
