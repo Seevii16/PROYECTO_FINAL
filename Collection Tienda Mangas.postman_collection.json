@@ -2,7 +2,8 @@
 	"info": {
 		"_postman_id": "f3f7812c-9537-4f0b-a5b4-76dec2299049",
 		"name": "Collection Tienda Mangas",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18625499"
 	},
 	"item": [
 		{
@@ -40,44 +41,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/tiendaMangas/mangas",
-					"protocol": "http",
+					"raw": "https://yorozuyamangas.herokuapp.com/mangas",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"yorozuyamangas",
+						"herokuapp",
+						"com"
 					],
-					"port": "3000",
 					"path": [
-						"tiendaMangas",
 						"mangas"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "AñadirUsuario",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\"usuarioId\": \"002\",\r\n      \"usuarioNombre\": \"vicente\",\r\n      \"usuarioContra\": \"vicente\",\r\n      \"usuarioEmail\": \"vicente@gmail.es\"\r\n    }",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/tiendaMangas/registrarse",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"tiendaMangas",
-						"registrarse"
 					]
 				}
 			},
@@ -89,14 +61,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/tiendaMangas/usuarios",
+					"raw": "http://localhost:5000/usuarios",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "5000",
 					"path": [
-						"tiendaMangas",
 						"usuarios"
 					]
 				}
@@ -106,32 +77,41 @@
 		{
 			"name": "Login",
 			"request": {
+				"auth": {
+					"type": "apikey"
+				},
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mjk2MGZjYzIxMTlkNDRiMWI3ZDE1NjciLCJpYXQiOjE2NTQwMDE2MTJ9.Q_wq620-vVU5oGF6egnSE5MU_GXPrYE-W4JAbnprfD4",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
 							"key": "usuarioEmail",
-							"value": "antoni3o@gmail.com",
+							"value": "eee@aaa.com",
 							"type": "text"
 						},
 						{
 							"key": "usuarioContra",
-							"value": "antonio",
+							"value": "aaa",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/tiendaMangas/login",
-					"protocol": "http",
+					"raw": "https://yorozuyamangas.herokuapp.com/login",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"yorozuyamangas",
+						"herokuapp",
+						"com"
 					],
-					"port": "3000",
 					"path": [
-						"tiendaMangas",
 						"login"
 					]
 				}
@@ -149,34 +129,71 @@
 						{
 							"key": "usuarioId",
 							"value": "4",
-							"type": "text"
+							"type": "text",
+							"disabled": true
 						},
 						{
 							"key": "usuarioNombre",
-							"value": "antonio",
+							"value": "aaae",
 							"type": "text"
 						},
 						{
 							"key": "usuarioContra",
-							"value": "antonio",
+							"value": "aaae",
 							"type": "text"
 						},
 						{
 							"key": "usuarioEmail",
-							"value": "antonio@gmail.com",
+							"value": "eaee@aaa.com",
+							"type": "text"
+						},
+						{
+							"key": "roles",
+							"value": "admin",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "usuarioUserName",
+							"value": "aaa773",
+							"type": "text"
+						},
+						{
+							"key": "usuarioEdad",
+							"value": "15",
+							"type": "text"
+						},
+						{
+							"key": "usuarioApellido1",
+							"value": "aaaa",
+							"type": "text"
+						},
+						{
+							"key": "usuarioDireccion",
+							"value": "aaaa",
+							"type": "text"
+						},
+						{
+							"key": "usuarioTel",
+							"value": "111111111111111",
+							"type": "text"
+						},
+						{
+							"key": "usuarioApellido2",
+							"value": "aaaa",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/tiendaMangas/registrarse",
-					"protocol": "http",
+					"raw": "https://yorozuyamangas.herokuapp.com/registrarse",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"yorozuyamangas",
+						"herokuapp",
+						"com"
 					],
-					"port": "3000",
 					"path": [
-						"tiendaMangas",
 						"registrarse"
 					]
 				}
@@ -218,14 +235,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/tiendaMangas/agregarPago",
-					"protocol": "http",
+					"raw": "https://yorozuyamangas.herokuapp.com/agregarPago",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"yorozuyamangas",
+						"herokuapp",
+						"com"
 					],
-					"port": "3000",
 					"path": [
-						"tiendaMangas",
 						"agregarPago"
 					]
 				}
@@ -247,14 +264,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/tiendaMangas/eliminarManga",
-					"protocol": "http",
+					"raw": "https://yorozuyamangas.herokuapp.com/eliminarManga",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"yorozuyamangas",
+						"herokuapp",
+						"com"
 					],
-					"port": "3000",
 					"path": [
-						"tiendaMangas",
 						"eliminarManga"
 					]
 				}
@@ -279,14 +296,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/tiendaMangas/mangas/demografia",
-					"protocol": "http",
+					"raw": "https://yorozuyamangas.herokuapp.com/mangas/demografia",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"yorozuyamangas",
+						"herokuapp",
+						"com"
 					],
-					"port": "3000",
 					"path": [
-						"tiendaMangas",
 						"mangas",
 						"demografia"
 					]

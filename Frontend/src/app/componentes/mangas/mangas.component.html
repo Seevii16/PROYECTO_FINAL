@@ -1,0 +1,17 @@
+
+<div class="row">
+    <div class="col-md-4" *ngFor="let manga of mangas">
+        <div class="card" style="margin-top:10px">
+            <img class="card-img imagen" style="height: 500px;" src={{manga.imagePath}} alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{manga.mangaName}}</h5>
+                <p class="card-text">Genero:{{manga.mangaGender}}</p>
+                <p class="card-text">Demografía:<b>{{manga.mangaDemography}}</b></p>
+                <p class="card-text acortarDescripcion">{{manga.mangaDescription}}</p>
+                <a (click)="elegirManga(manga._id)" class="btn btn-primary">Mas informacion</a>
+             
+            </div>
+           
+        </div>
+    </div>
+</div>

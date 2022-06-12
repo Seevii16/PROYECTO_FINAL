@@ -1,16 +1,24 @@
+
 const routes = require("./routes");
 const express = require("express");
 const mongoose = require("mongoose"); // new
-const { dbUrl } = require("./config");
+const cors = require('cors')
+require('dotenv').config();
+const URI = process.env.MONGODB_URI;
+const PORT = process.env.PORT;
+
 
 // Conexion con la Base de Datos de Mongo
-mongoose.connect(dbUrl).then(() => {
+mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
   const app = express();
+  app.use(cors());
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
-  app.use("/tiendaMangas", routes);
+  
+  app.use("/", routes);
 
-  app.listen(3000, () => {
+  app.listen(PORT, () => {
+    
     console.log("Server has started!");
   });
 });

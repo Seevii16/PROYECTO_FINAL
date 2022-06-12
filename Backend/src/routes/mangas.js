@@ -1,15 +1,17 @@
 const express = require("express");
 
-const { getManga, agregarManga, eliminarManga, buscarPorDemografia } = require("../controllers/mangas");
+import * as mangasController from '../controllers/mangas'
 
 const router = express.Router();
 
-router.get("/", getManga);
+router.get("/", mangasController.getMangas);
 
-router.post("/", agregarManga);
+router.get("/", mangasController.getManga);
 
-router.delete("/",eliminarManga)
+router.post("/", mangasController.agregarManga);
 
-router.get("/",buscarPorDemografia)
+router.delete("/",mangasController.eliminarManga)
+
+router.get("/",mangasController.buscarPorDemografia)
 
 module.exports = router;
