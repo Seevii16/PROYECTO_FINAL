@@ -29,6 +29,6 @@
 https://yorozuyamangas.herokuapp.com/
 
 ## Link Pagina Angular
-https://mangasyorozuya.vercel.app/login
+https://mangasyorozuya.vercel.app
 
 
